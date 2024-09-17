@@ -1,12 +1,14 @@
 footer {
   background-color: var(--light-tertiary-color);
-  background-color:whitesmoke;
+  background-color: whitesmoke;
+  text-align: center; /* Centraliza o texto */
 }
 
 footer .footer__content {
   text-align: center;
   padding: 6rem 2rem 1rem;
   max-width: 47rem;
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
 }
 
 footer .footer__content .footer__contact span {
@@ -14,8 +16,16 @@ footer .footer__content .footer__contact span {
   font-weight: 500;
 }
 
+footer .footer__content ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center; /* Centraliza a lista de itens */
+}
+
 footer .footer__content ul li {
   display: inline-block;
+  margin: 0 10px; /* Adiciona espaçamento entre os itens */
 }
 
 footer .footer__content ul a {
@@ -26,3 +36,4 @@ footer .footer__content ul a {
 footer .footer__content .footer__copyright {
   font-size: 1.4rem;
 }
+

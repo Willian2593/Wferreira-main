@@ -52,7 +52,7 @@
         <p>
           doar é enxergar a necessidade do outro e ter consciência de que você pode fazer a diferença na vida de uma pessoa
         </p>
-        <a href="#about" class="btn btn-primary">Doe Alimentos</a>
+          <a href="#about" class="btn btn-primary">Doe Alimentos</a>
       </div>
       <div class="header__right">
         <div class="header__image">
@@ -147,139 +147,52 @@
         </div>
     </section>
     
-
-
-
-    <!-- habilidades Seção-->
+ <!-- galeria de imagens-->
     <section id="skills" class="skills">
       <div class="skills__content max-width">
-        <h2 class="tertiary-title">Habilidades adquiridas a longo de anos de experiência</h2>
-        <p class="description">
-          Descubra as habilidades e ferramentas que domino e que me permitem
-          criar soluções criativas e funcionais para meus clientes.
-        </p>
-        <ul>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/aten.png" alt="Atendimento Web" />
-            </div>
-            <h3>Atendimento Web</h3>
-            <p>
-              Experiência em atendimento ao clientes em diversas plataformas,
-              online e presencial.
-            </p>
-          </li>
-          <!--Lista de Skill-->
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/design.png" alt="Web Design" />
-            </div>
-            <h3>Web Design</h3>
-            <p>
-              Habilidade em criar layouts modernos e responsivos, com foco na
-              experiência do usuário.
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/banco.png" alt="Banco de Dados" />
-            </div>
-            <h3>Banco de Dados</h3>
-            <p>
-              Conhecimentos em banco de dados, de diversas plataformas
-            </p>
-          </li>
-          <li class="skills__item">
-            <div class="image-container">
-              <img src="assets/linux.png" alt="Sistema Operacional Linux" />
-            </div>
-            <h3>Sistema Operacional Linux</h3>
-            <p>
-              Experiência em Sistema operacional Linux
-            </p>
-          </li>
-        </ul>
+        <h3 class="tertiary-title">Galeria de imagens</h3>
+        <img src="assets/doacoes.png" alt="Imagem de Fundo">
       </div>
     </section>
 
-    <!-- Projetos Seção-->
-    <section id="projects" class="projects max-width">
-      <div class="projects__content">
-        <h2 class="secondary-title">Atendimentos de Suporte em Destaque</h2>
-        <p>
-          aqui estão alguns dos sistemas que trabalho 
-          e presto suporte aos clientes.
-        </p>
-      </div>
-      <!--Lista de itens de projeto-->
-      <ul>
-        <li>
-          <div class="image">
-            <img src="assets/webposto.png" alt="Sistema em Nuvem" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Sistemas de Posto de Gasolina
-            </h3>
-            <p>
-              Suporte e configuração de Sistema em nuvem desenvolvido pela a empresa Quality, com funcionalidades
-              como cadastro clientes e produtos, relatório e Dashboad de vendas.
-            </p>
-            <a href="https://www.webposto.com.br/">Leia mais &rarr;</a>
-          </div>
-        </li>
-        <li class="projects__reversed-list">
-          <div class="image">
-            <img src="assets/pdv.png" alt="ecommerce" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Sistemas de vendas de Postos de Gasolina
-            </h3>
-            <p>
-             Sistema intregado com automação de bombas de combustíveis,
-             que permite realizar vendas com diversos tipos de pagamento,
-             tais como cartões,pix,notas a prazo, cheque e etc.
-            </p>
-            <a href="https://www.webposto.com.br/solucoes/webposto-pdv/">Leia mais &rarr;</a>
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <img src="assets/pay.png" alt="app" />
-          </div>
-          <div class="projects__info">
-            <h3 class="tertiary-title">
-              Suporte e configuração de App de Maquina de Cartão integrado com o sistema.
-            </h3>
-            <p>
-              Aplicativo mobile desenvolvido pela a empresa Quality!,
-              Com ele o frentista realiza a venda, recebe nas mais diversas formas de pagamento e emite o cupom de venda.
-              Tudo direto do equipamento!
-            </p>
-            <a href="https://www.webposto.com.br/solucoes/webposto-pay/">Leia mais &rarr;</a>
-          </div>
-        </li>
-      </ul>
-    </section>
+   <!-- Voluntário -->
+<section id="projects" class="projects max-width">
+  <div class="projects__content">
+    <h2 class="secondary-title">Faça a diferença, seja um voluntário</h2>
+    <p>Preencha o formulário e seja um voluntário</p>
 
-    <!--Seção de formação acadêmica-->
-    <section id="formacao" class="projects max-width">
-      <div class="projects__content">
-        <h2 class="secondary-title">Formação Acadêmica</h2>
-        <p>
-          <br>
-          <ol style="list-style: square;">
-          <li>Técnico de Informatica</li>
-         <li>Especialização em Hardware</li>
-         <li>Curso de Banco de Dados</li>
-         <li>Web Desine</li>
-        <li>Graduando em Analíse e Desenvoilvimento de Sistemas</li>
-        </ol>
-      </p>
-      </div>
-    </section>
-    <br><br><br><br><br> <br><br><br><br><br><br><br><br><br>
+    <!-- Formulário de Voluntariado -->
+    <div class="form-container volunteer-form">
+      <form action="#" method="post">
+        <!-- Grupo de Nome e Endereço -->
+        <div class="form-group">
+          <div class="input-pair">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Celular:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br><br>
+          
+         
+          </div>
+         
+
+       <!-- Botão de Enviar -->
+       <button type="submit">Enviar</button>
+       
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Link para o novo CSS -->
+<link rel="stylesheet" href="volunteer-form.css">
+
     
     <!-- Footer Seção -->
     <footer id="footer">
@@ -318,7 +231,7 @@
           </li>
         </ul>
         <p class="footer__copyright">
-          © 2023 Willian Ferreira. Todos os direitos reservados.
+          © 2024 Willian Ferreira. Todos os direitos reservados.
         </p>
       </div>
     </footer>
