@@ -67,7 +67,7 @@
         <div class="form-image-container">
             <!-- Formulário -->
             <div class="form-container">
-                <form action="#" method="post">
+              <form id="contact-form" action="#" method="post">
                     <div class="form-group">
                         <div class="input-pair">
                             <label for="name">Nome Completo:</label>
@@ -157,9 +157,9 @@
 
    <!-- Voluntário -->
 <section id="projects" class="projects max-width">
-  <div class="projects__content">
+   <div class="projects__content">
     <h2 class="secondary-title">Faça a diferença, seja um voluntário</h2>
-    <p>Preencha o formulário e seja um voluntário</p>
+     <p>Preencha o formulário e seja um voluntário</p>
 
     <!-- Formulário de Voluntariado -->
     <div class="form-container volunteer-form">
@@ -195,25 +195,25 @@
 
     
     <!-- Footer Seção -->
-    <footer id="footer">
-      <div class="footer__content max-width mb-0">
-        <h2 class="tertiary-title mb-s">Entre em contato</h2>
-        <p class="mb-m">
-          <form action="#" method="post">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Seu Nome" style="width: 300px;"> <br>
-            
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="seuemail@example.com" style="width: 300px;"> <br>
-            
-            <label for="observacao">Observação:</label><br>
-            <textarea id="observacao" name="observacao" placeholder="Sua observação..." rows="4" cols="50"></textarea><br><br>
-            
-            <input type="submit" class="btn btn-primary" value="Enviar">
-          </form>
+  <footer id="footer">
+    <div class="footer__content max-width mb-0">
+      <h2 class="tertiary-title mb-s">Entre em contato</h2>
+      <p class="mb-m">
+        <form id="contact-form" action="#" method="post">
+          <label for="nome">Nome:</label><br>
+          <input type="text" id="nome" name="nome" placeholder="Seu Nome" style="width: 300px;"> <br>
           
-          <!--Informações de contato e ícones de mídia social-->        
-          <div class="footer__contact mb-m">
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" placeholder="seuemail@example.com" style="width: 300px;"> <br>
+          
+          <label for="observacao">Observação:</label><br>
+          <textarea id="observacao" name="observacao" placeholder="Sua observação..." rows="4" cols="50"></textarea><br><br>
+          
+          <input type="submit" class="btn btn-primary" value="Enviar">
+        </form>
+        
+        <!-- Informações de contato e ícones de mídia social -->        
+        <div class="footer__contact mb-m">
           <br>
           <span class="mb-m">meuemail@email.com</span>
           <br>
@@ -234,8 +234,26 @@
           © 2024 Willian Ferreira. Todos os direitos reservados.
         </p>
       </div>
-    </footer>
-    <!-- script Seção-->
-    <script src="scripts/index.js"></script>
-  </body>
+    </div>
+  </footer>
+  
+  <!-- Script Seção -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Substitua pelos valores reais obtidos no painel do EmailJS
+    emailjs.init("p8k3lkDhourfYo1Jc"); // Substitua pelo seu USER_ID
+
+    document.querySelector("#contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      emailjs.sendForm("service_rfpcuq7", "template_i4paljc", this)
+        .then(function(response) {
+          alert("E-mail enviado com sucesso!");
+          document.querySelector("#contact-form").reset(); // Opcional: limpa o formulário após o envio
+        }, function(error) {
+          alert("Falha ao enviar o e-mail.");
+        });
+    });
+  </script>
+</body>
 </html>
