@@ -19,8 +19,12 @@
   </head>
   <body>
     <!--Seção da barra de navegação-->
+    
     <nav class="navbar">
+     
       <div class="navbar__content max-width mb-0">
+        <a href="https://github.com/Willian2593" id="btn" target="_blank">© Willian Ferreira</a>
+       
         <a href="#"  class="navbar_logo">
           <img src="assets/logo.png" alt="will" />
         </a>
@@ -136,7 +140,7 @@
                         </tbody>
                     </table>
     
-                    <button type="submit">Enviar</button>
+                   <button type="submit">Enviar</button>
                 </form>
             </div>
     
@@ -163,7 +167,7 @@
 
     <!-- Formulário de Voluntariado -->
     <div class="form-container volunteer-form">
-      <form action="#" method="post">
+      <form id="contact-form2" action="#" method="post">
         <!-- Grupo de Nome e Endereço -->
         <div class="form-group">
           <div class="input-pair">
@@ -183,6 +187,7 @@
          
 
        <!-- Botão de Enviar -->
+       
        <button type="submit">Enviar</button>
        
       </form>
@@ -199,7 +204,7 @@
     <div class="footer__content max-width mb-0">
       <h2 class="tertiary-title mb-s">Entre em contato</h2>
       <p class="mb-m">
-        <form id="contact-form" action="#" method="post">
+        <form id="contact-form3" action="#" method="post">
           <label for="nome">Nome:</label><br>
           <input type="text" id="nome" name="nome" placeholder="Seu Nome" style="width: 300px;"> <br>
           
@@ -237,7 +242,7 @@
     </div>
   </footer>
   
-  <!-- Script Seção -->
+  <!-- Script Seção doação de alimentos -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     // Substitua pelos valores reais obtidos no painel do EmailJS
@@ -255,5 +260,48 @@
         });
     });
   </script>
+
+  <!-- Script Seção voluntarios -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Substitua pelos valores reais obtidos no painel do EmailJS
+    emailjs.init("p8k3lkDhourfYo1Jc"); // Substitua pelo seu USER_ID
+
+    document.querySelector("#contact-form2").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      emailjs.sendForm("service_rfpcuq7", "template_i4paljc", this)
+        .then(function(response) {
+          alert("E-mail enviado com sucesso!");
+          document.querySelector("#contact-form").reset(); // Opcional: limpa o formulário após o envio
+        }, function(error) {
+          alert("Falha ao enviar o e-mail.");
+        });
+    });
+  </script>
+
+  <!-- Script Seção contatos -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Substitua pelos valores reais obtidos no painel do EmailJS
+    emailjs.init("p8k3lkDhourfYo1Jc"); // Substitua pelo seu USER_ID
+
+    document.querySelector("#contact-form3").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      emailjs.sendForm("service_rfpcuq7", "template_i4paljc", this)
+        .then(function(response) {
+          alert("E-mail enviado com sucesso!");
+          document.querySelector("#contact-form").reset(); // Opcional: limpa o formulário após o envio
+        }, function(error) {
+          alert("Falha ao enviar o e-mail.");
+        });
+    });
+  </script>
+
+
+
+
+
 </body>
 </html>

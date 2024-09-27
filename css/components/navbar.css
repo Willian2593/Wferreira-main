@@ -21,7 +21,7 @@
 }
 
 .navbar .navbar__content .navbar__links li:not(:last-of-type) {
-  margin-right: 5rem;
+  margin-right: 12rem;
 }
 
 .navbar .navbar__content .navbar__links a {

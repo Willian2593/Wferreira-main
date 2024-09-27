@@ -176,7 +176,7 @@ table {
   border-collapse: collapse;
   margin: 30px 0;
   font-size: 16px;
-  text-align: top;
+  text-align: center;
 }
 
 th, td {
@@ -293,9 +293,168 @@ input[type="number"] {
   box-sizing: border-box;
 }
 
+#btn {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;	
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-items: right;
+  justify-content: right;
+  align-content: right;
+  text-align: right;
+  align-items: right;
+  margin-left: -10px;
+  margin-right: auto;
+  margin-top: 15px;
+  height: 30px;
+  width: 250px;
+  animation-name: btanim1;
+  animation-duration: 4s;
+
+}
+
+#btn span {
+  z-index: 2;	
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;	
+}
+#btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(51, 46, 53, 0.186)
+}
+#btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(51, 46, 53, 0.186)
+}
+#btn:hover::before {
+transform: rotate(-45deg);
+background-color: rgba(51, 46, 53, 0.186)
+}
+#btn:hover::after {
+transform: rotate(45deg);
+background-color: rgba(51, 46, 53, 0.186)
+}
+
+   
+
+
+@keyframes quadrado {
+  0%   {background-color:rgb(255, 255, 255); left:0px; top:0px;}
+  
+  50%  {background-color:rgb(255, 255, 255); left:0px; top:200px;}
+ 
+  100% {background-color:rgb(107, 34, 175); left:0px; top:0px;}
+}
+
+@keyframes btanim1 {
+  0%   {left:0px; top:0px;}
+  
+  50%  { left:0px; top:200px;}
+ 
+  100% { left:0px; top:0px;}
+}
 
 
 
+
+
+
+
+
+
+#btn1 {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  justify-items: center;
+  align-items: center;
+  height: 40px;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+
+  animation-name: btanim1;
+  animation-duration: 3s;
+  
+}
+#btn1 span {
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+#btn1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style:solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+
+
+
+  
+}
+#btn1:hover span {
+  letter-spacing: 2px;
+  
+}
+#btn1:hover::before {
+  opacity: 1;	
+  transform: scale(1, 1);
+ 
+
+
+}
+#btn1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(51, 46, 53, 0.186)
+}
+#btn1:hover::after {
+  opacity: 0;	
+  transform: scale(0.1, 1);
+}
 
 /* Responsividade */
 @media only screen and (max-width: 1024px) {
